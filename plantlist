@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,18 +16,17 @@
 
     <nav>
         <div class="container">
-            <a href="Home.html">Home</a>
-            <a href="säsong.html">Säsong</a>
-            <a href="Växtlista">Växtlista</a>
-            <a href="OmOss">Om oss</a>
-
+            <a href="home.html">Home</a>
+            <a href="season.html">Säsong</a>
+            <a href="plantlist.html">Växtlista</a>
+            <a href="aboutus.html">Om oss</a
         </div>
     </nav>
 
     <main>
         <div class="container">
             <article>
-                <h2>Växtlista!</h2>
+                <h2>Välkommen!</h2>
                 <section>
                     <p>På denna sidan hittar alla möjliga tips och trix för att dra igång din egna plantodling!</p>
                     <p>Information om både grönsaker och örter finns att hitta på denna sida.</p>
