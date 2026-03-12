@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #b4e1c5;
+    --nav-bg: #abceaf;
+    --text-color: #333333;
+    --main-bg: #b0ddd9;
+    --header-bg: #cde5be; /* Dark Navy */
+
+    --header-text: #ffffff; /* White text for contrast */
+
+    --accent-color: #3498db; /* Bright Blue */
+
+    --max-width: 800px;
+}
+
+
+
+body {
+    font-family: Roboto, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0; /* Removed margin to let header hit the edges */
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+
+
+/* The New Header Section */
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-color);
+}
+
+
+
+    /* Center the content inside the header */
+
+    header .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+
+
+nav {
+    background-color: var(--nav-bg);
+    padding: 10px 0;
+}
+    nav a.active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+
+    nav .container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px 40px;
+    }
+
+main {
+    flex: 1;
+    width: 100%; /* Tvingar main att sträcka ut sig helt */
+    background-color: var(--main-bg);
+}
+
+
+
+    main .container {
+        max-width: var(--max-width); /* 800px */
+       
+        padding: 20px 40px;
+        text-align: left; /* Texten SKA nu hamna till vänster */
+        width: 100%; /* Säkerställer att containern tar sin plats */
+    }
+
+
+
+
+
+    main img {
+        display: block; /* Gör bilden till ett eget block */
+        margin-top: 30px; /* Skapar ett mellanrum på 30 pixlar ovanför bilden */
+        margin-bottom: 20px; /* Skapar mellanrum under bilden */
+        max-width: 100%; /* Gör bilden mobilvänlig */
+        height: auto;
+    }
+
+
+
+p {
+    line-height: 1.0;
+    margin-bottom: 0; /* Ändra från 1em till 0 */
+    margin-top: 0; /* För säkerhets skull, nollställ även toppen */
+}
+
+
+
+footer {
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+   
+}
