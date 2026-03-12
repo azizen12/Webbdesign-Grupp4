@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Gr4 Plantskola</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="Home.html">Home</a>
+            <a href="säsong.html">Säsong</a>
+            <a href="Växtlista.html">Växtlista</a>
+            <a href="OmOss.html">Om oss</a>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article>
+                <h2>Om oss</h2>
+                <section>
+                    <p>På denna sidan hittar alla möjliga tips och trix för att dra igång din egna plantodling!</p>
+                    <p>Information om både grönsaker och örter finns att hitta på denna sida.</p>
+                    <p>Vi har även en sektion som tar säsonger i beaktning.</p>
+                </section>
+            </article>
+
+            <img src="img/image2.jpg" alt="A beautiful sunflower in a garden" width="500">
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gr4 Plantskola. </p>
+            <p>www.hb.se</p>
+        </div>
+    </footer>
+</body>
+
+
+
+</html>
