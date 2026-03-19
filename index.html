@@ -16,12 +16,25 @@
 
     <nav aria-label="Huvudmeny">
         <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="season.html">Season</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown-wrapper">
+                <button class="dropdown-btn" onclick="toggleDropdown(event)">
+                    Seasons <span id="dropdownArrow">▾</span>
+                </button>
+
+                <ul id="seasonDropdown" class="dropdown">
+                    <li><a href="season-spring.html">Spring</a></li>
+                    <li><a href="season-summer.html">Summer</a></li>
+                    <li><a href="season-autumn.html">Autumn</a></li>
+                    <li><a href="season-winter.html">Winter</a></li>
+                </ul>
+            </li>
             <li><a href="plantlist/index.html">Plant List</a></li>
             <li><a href="aboutus.html">About us</a></li>
         </ul>
     </nav>
+
+
 
     <main>
         <div class="container">
@@ -44,5 +57,38 @@
             <p>www.hb.se</p>
         </div>
     </footer>
+
+
+    <script>
+        function toggleDropdown(event) {
+            event.stopPropagation(); // Stoppar klick från att bubbla upp
+
+            const dropdown = document.getElementById("seasonDropdown");
+            const arrow = document.getElementById("dropdownArrow");
+
+            const isOpen = dropdown.style.display === "block";
+
+            // Stäng alla dropdowns (ifall du lägger till fler i framtiden)
+            closeDropdowns();
+
+            if (!isOpen) {
+                dropdown.style.display = "block";
+                arrow.textContent = "▴"; // Pil uppåt
+            }
+        }
+
+        // Funktion som stänger alla dropdowns
+        function closeDropdowns() {
+            document.getElementById("seasonDropdown").style.display = "none";
+            document.getElementById("dropdownArrow").textContent = "▾"; // Pil neråt
+        }
+
+        // Stäng dropdown vid klick ANYWHERE på sidan
+        document.addEventListener("click", function () {
+            closeDropdowns();
+        });
+    </script>
+    ``
+
 </body>
 </html>
