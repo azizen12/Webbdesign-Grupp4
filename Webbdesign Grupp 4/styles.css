@@ -1,0 +1,189 @@
+﻿:root {
+    --bg-color: #b4e1c5;
+    --nav-bg: #abceaf;
+    --text-color: #333333;
+    --main-bg: #b0ddd9;
+    --header-bg: #cde5be; /* Dark Navy */
+
+    --header-text: #ffffff; /* White text for contrast */
+
+    --accent-color: #3498db; /* Bright Blue */
+
+    --max-width: 800px;
+}
+
+
+
+body {
+    font-family: Roboto, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0; /* Removed margin to let header hit the edges */
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* The New Header Section */
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    height: 120px;
+    display: flex;
+    align-items:center;
+    justify-content: left;
+    }
+
+.logo-container {
+    display: flex;
+    background-color: var(--header-bg); /* Smälter in med din design */
+    border-radius: 5px; /* Mjuk form */
+    max-width: 300px; /* Stoppar loggan från att bli för stor */
+    margin: 0 auto; /* Centrerar containern på sidan */
+}
+
+.logo-container img {
+    width: 50%;
+    height: auto;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    padding: 10px 0;
+}
+
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: nowrap; /* tvingar allt på en rad */
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.3s ease; /* Mjuk animation */
+        }
+
+            nav ul li a:hover {
+                background-color: var(--accent-color);
+                color: white;
+                transform: scale(1.05); /* Liten "pop-up"-känsla */
+            }
+
+
+
+    nav a.active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+
+    nav .container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+        /*padding: 20px 40px;*/
+    }
+
+main {
+    flex: 1;
+    width: 100%; /* Tvingar main att sträcka ut sig helt */
+    background-color: var(--main-bg);
+}
+
+
+
+    main .container {
+        max-width: var(--max-width); /* 800px */
+
+        padding: 20px 40px;
+        text-align: left; /* Texten SKA nu hamna till vänster */
+        width: 100%; /* Säkerställer att containern tar sin plats */
+    }
+
+
+
+
+
+    main img {
+        display: block; /* Gör bilden till ett eget block */
+        margin-top: 30px; /* Skapar ett mellanrum på 30 pixlar ovanför bilden */
+        margin-bottom: 20px; /* Skapar mellanrum under bilden */
+        max-width: 100%; /* Gör bilden mobilvänlig */
+        height: auto;
+    }
+
+
+
+p {
+    line-height: 1.0;
+    margin-bottom: 0; /* Ändra från 1em till 0 */
+    margin-top: 0; /* För säkerhets skull, nollställ även toppen */
+}
+
+
+
+footer {
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Dropdown layout */
+.dropdown-wrapper {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: var(--nav-bg);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    padding: 5px 10px;
+    line-height: 1.2;
+}
+
+.dropdown-btn-span {
+    margin-left: 5px;
+}
+
+.dropdown-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    transform: scale(1.05);
+}
+
+/* Dropdown-listan */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: var(--bg-color);
+    border: 1px solid #77c977;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 150px;
+}
+
+    .dropdown li {
+        padding: 6px 8px;
+    }
+
+        .dropdown li:hover {
+            background: var(--bg-color);
+        }
