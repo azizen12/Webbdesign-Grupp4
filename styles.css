@@ -62,6 +62,35 @@ nav {
     background-color: var(--nav-bg);
     padding: 10px 0;
 }
+
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: nowrap; /* tvingar allt på en rad */
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.3s ease; /* Mjuk animation */
+        }
+
+            nav ul li a:hover {
+                background-color: var(--accent-color);
+                color: white;
+                transform: scale(1.05); /* Liten "pop-up"-känsla */
+            }
+
+
+
     nav a.active {
         font-weight: bold;
         text-decoration: underline;
@@ -73,7 +102,7 @@ nav {
         align-items: flex-start;
         gap: 20px;
         flex-wrap: wrap;
-        padding: 20px 40px;
+        /*padding: 20px 40px;*/
     }
 
 main {
@@ -86,7 +115,7 @@ main {
 
     main .container {
         max-width: var(--max-width); /* 800px */
-       
+
         padding: 20px 40px;
         text-align: left; /* Texten SKA nu hamna till vänster */
         width: 100%; /* Säkerställer att containern tar sin plats */
@@ -119,5 +148,50 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 1rem 0;
-   
 }
+
+/* Dropdown layout */
+.dropdown-wrapper {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: var(--nav-bg);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    padding: 5px 10px;
+    line-height: 1.2;
+}
+
+.dropdown-btn-span {
+    margin-left: 5px;
+}
+
+.dropdown-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Dropdown-listan */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: var(--bg-color);
+    border: 1px solid #77c977;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 150px;
+}
+
+    .dropdown li {
+        padding: 6px 8px;
+    }
+
+        .dropdown li:hover {
+            background: #f0f0f0;
+        }
