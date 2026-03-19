@@ -92,14 +92,21 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\header2.png" />
+    <Content Include="img\image1.png" />
+    <Content Include="img\image2.jpg" />
+    <Content Include="img\plantlist.html" />
     <Content Include="index.html" />
     <Content Include="JavaScript.js" />
     <Content Include="aboutus.html" />
+    <Content Include="plantlist\index.html" />
+    <Content Include="plantlist\ivy\index.html" />
+    <Content Include="plantlist\lavender\index.html" />
+    <Content Include="plantlist\perennial\index.html" />
     <Content Include="seasons\autumn\autumn.html" />
     <Content Include="seasons\spring\spring.html" />
     <Content Include="seasons\summer\summer.html" />
     <Content Include="styles.css" />
-    <Content Include="season.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +148,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -149,7 +157,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
