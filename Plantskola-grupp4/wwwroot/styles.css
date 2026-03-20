@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --bg-color: #b4e1c5;
     --nav-bg: #abceaf;
     --text-color: #333333;
@@ -26,37 +26,29 @@ body {
     min-height: 100vh;
 }
 
-
-
-
-
 /* The New Header Section */
 
 header {
     background-color: var(--header-bg);
     color: var(--header-text);
-    padding: 2rem 0;
-    text-align: center;
-    color: var(--text-color);
+    height: 120px;
+    display: flex;
+    align-items:center;
+    justify-content: left;
+    }
+
+.logo-container {
+    display: flex;
+    background-color: var(--header-bg); /* Smälter in med din design */
+    border-radius: 5px; /* Mjuk form */
+    max-width: 300px; /* Stoppar loggan från att bli för stor */
+    margin: 0 auto; /* Centrerar containern på sidan */
 }
 
-
-
-    /* Center the content inside the header */
-
-    header .container {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-
-
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-    }
-
-
+.logo-container img {
+    width: 50%;
+    height: auto;
+}
 
 nav {
     background-color: var(--nav-bg);
@@ -172,7 +164,7 @@ footer {
 
 .dropdown-btn:hover {
     background-color: var(--accent-color);
-    color: white;
+    color: var(--bg-color);
     transform: scale(1.05);
 }
 
@@ -193,5 +185,40 @@ footer {
     }
 
         .dropdown li:hover {
-            background: #f0f0f0;
+            background: var(--bg-color);
         }
+
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-content: ;
+    gap: 5px;
+}
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .contact-form button {
+        padding: 10px;
+        background-color: var(--accent-color);
+        border: none;
+        color: white;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .contact-form button:hover {
+            background-color: #287bb5;
+        }´s
